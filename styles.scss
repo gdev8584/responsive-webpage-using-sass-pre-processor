@@ -1,0 +1,450 @@
+@import './SCSS/color';
+@import './SCSS/mixin';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    width: 100%;
+    background: $content_color;
+  }
+
+  .main_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .container{
+        background: $body_color;
+    }
+    & .row {
+        padding-top: 3.2rem;
+        width: 100%;
+      }
+      & .nav-item {
+        font-size: 1.6rem;
+        margin: 0 2rem;
+        color: #000000;
+        font-weight: 700;
+        font-family: Segoe UI, Semibold;
+      }
+  }
+  .border{
+    width: 100%;
+    height: 0.2rem;
+    background: $horz_color;
+  }
+
+  // our main start
+.header_hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //margin-bottom: 14rem;
+    //background: $body_color;
+    & .container{
+        //height: 90vh;
+        background: $content_color;
+        & svg {
+            position: absolute;
+            left: 0;
+            bottom: -6rem;
+            z-index: 1;
+        }
+    }
+    & .row{
+        background: $body_color;
+    }
+    &_text {
+        height: 70vh;
+        @include content_center(flex-start);
+        & h2{
+            padding-left: 10rem;
+            color: $text-color;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            line-height: 150%;
+            font-weight: 800;
+        }
+        & p {
+            padding-left: 10rem;
+            font-size: 1.5rem;
+            color: $text-color;
+            margin-bottom: 5rem;
+            font-weight: 600;
+        }
+        & .header_text__btn {
+            display: flex;
+            align-items: center;
+            padding-left: 10rem;
+            &  a {
+                @include mybtn;
+                z-index: 999;
+                &:hover {
+                    @include hovereffects;
+                }
+            }
+        }
+    }
+
+    &__img {
+        //background: black;
+        @include content_center(center);
+        animation: anime_hero 10s liner infinite alternate;
+        & img{
+            height: 70vh;
+        }
+        @keyframes anime_hero {
+            from {
+                transform: scale(0.8);
+            }to {
+                transform: scale(1);
+            }
+        }
+        & {
+            filter: drop-shadow(0 1.5rem 1rem rgba(0,0,0,0.2));
+        }
+    }
+    
+}
+
+// second page
+.second_body {
+    //height: 80vh;
+    margin-bottom: 14rem;
+    & h2{
+        @include heading_2;
+        margin-top: 20rem;
+    }
+
+    & h5{
+        @include heading_5;
+    }
+    & p {
+        @include p;
+    }
+    & .card {
+        border-radius: 1.2rem;
+        margin-bottom: 3rem;
+        
+        }
+}
+// third page
+.third_body {
+    //margin-bottom: 14rem;
+    & .container {
+        background: $body_color;
+        //height: 100vh;
+        & h2{
+            background: $content_color;
+            @include heading_2;
+            z-index: 999;
+        }    
+        & svg {
+            //transform: rotate(180deg);
+            position: absolute;
+            left: 0;
+            
+            // bottom: -6rem;
+            z-index: 1;
+        }
+        & .img_block {
+            margin-top: 11rem;
+            z-index: 999;
+            
+            & img{
+                width: 18rem;
+                height: 15rem;
+            }
+            & h5{
+                padding-left: 3rem;
+                padding-top: 3rem;
+                text-align: center;
+                color: $text-color;
+                font-size: 1.6rem;
+                font-weight: 700; 
+            }
+            & p{
+                width: 27rem;
+                font-size: 1.2rem;
+                color: $text-color;
+                margin-bottom: 2rem;
+                font-weight: 500;
+                padding: 1rem 0 0 3rem ;
+            }
+        }
+    }
+}
+
+// forth page
+.forth_body {
+    //margin-bottom: 10rem;
+    & .container {
+        background: $body_color;
+        //height: 100vh;
+        & h2{
+            padding-top: 14rem;
+            @include heading_2;
+            margin-bottom: 10rem;
+        }
+        & img {
+            width: 6rem;
+            height: 6rem;
+        }
+        & h5  {
+            padding-top: 2rem;
+            margin-left: 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        & .body_text {
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
+        & .body_text1 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-right: 5rem;
+        }
+        & .body_btn {
+            display: flex;
+            align-items: flex-start;
+            margin: 1rem 0 5rem 0;
+            //padding-left: 10rem;
+            &  a {
+                @include mybtn;
+                &:hover {
+                    @include hovereffects;
+                }
+            }
+        }
+    }
+} 
+// fifth page
+.fifth_body{
+    & .container {
+        background: $body_color;
+        height: 100vh;
+        & h2{
+            margin-top: 20rem;
+            @include heading_2;
+            margin-bottom: 8rem;
+        }
+        & img {
+            margin: 2rem;
+        } 
+        & h5  {
+            padding-top: 3.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        & .fifth_col {
+            filter: drop-shadow(0px 16px 48px #00000029);
+            background: $content_color;
+            border-radius: 3rem;
+            height: 28rem;
+        }
+        & .axc {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 2rem;
+            background: $body_color;
+            position: absolute;
+            top: 12rem;
+            filter: drop-shadow(0px 16px 48px #00000029);
+        }
+        & .arrow {
+            width: 5rem;
+            height: 5rem;
+            background: $body_color;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            right: -3rem;
+            bottom: 4rem;
+            filter: drop-shadow(0px 7px 17px #00000029);
+            & i{
+                font-size: 2rem;
+                position: absolute;
+                top: 1.5rem;
+                left: 1.9rem;
+            }
+        }
+        & .txt1 {
+            position: absolute;
+            top: 5rem;
+            padding: 0.5rem;
+            font-weight: 500;
+        }
+        & .c1 {
+            width: 3rem;
+            position: absolute;
+            top: -1rem;
+            left: 0%;
+        }
+        & .c2 {
+            width: 2.5rem;
+            position: absolute;
+            right: 2rem;
+            top:0;
+        }
+        & .c3 {
+            width: 2.5rem;
+            position: absolute;
+            right: 1rem;
+            top:0;
+        }
+        & .c4 {
+            width: 2.5rem;
+            position: absolute;
+            right: 0rem;
+            top:0;
+        }
+        & .c5 {
+            width: 2.5rem;
+            position: absolute;
+            right: -1rem;
+            top:0;
+        }
+        & h3 {
+            font-size: 1rem;
+            position: absolute;
+            top: 1.2rem;
+            left: 4.5rem;
+        }
+        & .r1 {
+            font-size: 1rem;
+            position: absolute;
+            top: 2.3rem;
+            left: 5.3rem;
+        } 
+
+    }
+}
+// sixth page
+.sixth_body{
+    & .container {
+        background: $body_color;
+        height: 100vh;
+        & h2{
+            margin-top: 20rem;
+            @include heading_2;
+            margin-bottom: 8rem;
+        }
+        & .img_block {
+            & .i1{
+                width: 14rem;
+                height: 7rem;
+            }
+            & .i2{
+                width: 14rem;
+                height: 7rem;
+            }
+            & .i3 {
+                width: 7rem;
+                height: 7rem;
+            }
+            & h5 {
+                margin-top: 0.5rem;
+                font-weight: 700;
+            }
+  }
+}
+}
+// seventh page
+.seventh_body{
+    & .container{
+        background: $text-color;
+        height: 40vh;
+        color: $body_color;
+        text-align: center;
+    }
+    & .row {
+        transform: translateY(20rem);
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 993px) {
+    html {
+        font-size: 50%;
+    }
+    .header_hero{
+        & svg{
+            display: none;
+        }
+        & img{
+            display: none;
+        }
+    & h2{
+        padding-left: 10rem;
+        color: $text-color;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        line-height: 150%;
+        font-weight: 800;
+    }
+    & p {
+        padding-left: 10rem;
+        font-size: 1.5rem;
+        color: $text-color;
+        margin-bottom: 5rem;
+        font-weight: 600;
+    }
+}
+.third_body{
+    //height: 130vh;
+    & .a11 {
+        position: relative;
+        transform: translate(0);
+        background: #F8FAFC;
+        color: #000000;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: 2rem;
+        padding: 2rem 2rem;
+        margin-bottom: 5rem;
+        line-height: 100%;
+        font-weight: 700;
+        z-index: 999;
+    }
+}
+.fifth_body{
+    & .container {
+        background: $body_color;
+        height: 60vh;
+    }
+}
+.sixth_body{
+    & .container {
+        background: $body_color;
+        height: 90vh;
+            & h5 {
+                margin-top: 0.5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+  }
+}
+.seventh_body{
+    & .container{
+        background: $text-color;
+        height: 20vh;
+        color: $body_color;
+        text-align: center;
+    }
+    & .row {
+        transform: translateY(15rem);
+        font-size: 1.8rem;
+    }
+}
+
+}
+
